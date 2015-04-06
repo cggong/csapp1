@@ -46,6 +46,9 @@ _start:
 	pushl ST_FILE_DESCRIPTOR(%ebp)
 	pushl $record1
 	call write_record
+	addl $4, %esp
+	pushl $record2
+	call write_record
 	addl $8, %esp
 close_the_file:
 	movl $SYS_CLOSE, %eax

@@ -53,6 +53,7 @@ loop_begin:
 	pushl $record_buffer
 	call write_record
 	addl $8, %esp
+	jmp loop_begin
 loop_end:
 	movl $SYS_CLOSE, %eax
 	movl STFD_IN(%ebp), %ebx #NO DOLLAR SIGN FOR DISP!
