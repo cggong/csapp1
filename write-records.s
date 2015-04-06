@@ -15,7 +15,20 @@ record1:
 	.byte 0
 	.endr
 	.long 45
-
+record2:
+	.ascii "Odysseus\0"
+	.rept 31
+	.byte 0
+	.endr
+	.ascii "Laertes\0"
+	.rept 32
+	.byte 0
+	.endr
+	.ascii "Royal Palace, Ithaca, Ancient Greece\0"
+	.rept 203
+	.byte 0
+	.endr
+	.long 45
 	.text
 file_name:
 	.ascii "writetest\0"
